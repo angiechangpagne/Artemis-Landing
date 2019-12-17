@@ -5,11 +5,11 @@ import Brightness3Icon from "@material-ui/icons/Brightness3";
 import WbSunnyIcon from "@material-ui/icons/WbSunny";
 import { lightTheme, darkTheme } from "../themes/theme";
 import { useTranslation } from "react-i18next";
-import LanguageMenu from "./LanguageMenu";
+import LanguageMenu from "../containers/LanguageMenu";
 
-import "./MyApp.css";
+import "../containers/MyApp.css";
 
-const MyApp: React.FC = () => {
+const projectArtemis: React.FC = () => {
   const darkMode = useDarkMode();
   const { t } = useTranslation();
   const theme = darkMode.value ? darkTheme : darkTheme;
@@ -36,8 +36,8 @@ const MyApp: React.FC = () => {
         <CssBaseline />
         <Grid container alignContent="center" alignItems="center" justify="center" direction="column">
           <img className="logo" alt="logo" src={darkMode.value
-            ? "https://i.pinimg.com/564x/88/39/ff/8839ffabb148d4f24e2f1aa6598d12b5.jpg" //tslint:disable-line
-            : "https://i.pinimg.com/564x/88/39/ff/8839ffabb148d4f24e2f1aa6598d12b5.jpg" //tslint:disable-line
+            ? "https://i.pinimg.com/564x/e1/6b/ae/e16baed2c9260aee9b70bcedb510b95f.jpg" //tslint:disable-line
+            : "https://i.pinimg.com/564x/e1/6b/ae/e16baed2c9260aee9b70bcedb510b95f.jpg" //tslint:disable-line
           } style={{ paddingTop: "10%" }} />
           <Typography variant="caption" style={{ position: "absolute", bottom: "10px" }}>
             {t("Date", { date: new Date() })}
@@ -48,4 +48,4 @@ const MyApp: React.FC = () => {
   );
 };
 
-export default MyApp;
+export default projectArtemis;
