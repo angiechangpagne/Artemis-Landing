@@ -6,6 +6,7 @@ import WbSunnyIcon from "@material-ui/icons/WbSunny";
 import { lightTheme, darkTheme } from "../themes/theme";
 import { useTranslation } from "react-i18next";
 import LanguageMenu from "./LanguageMenu";
+import Header from "./Header";
 
 import "./MyApp.css";
 
@@ -17,6 +18,7 @@ const MyApp: React.FC = () => {
   return (
     <MuiThemeProvider theme={theme}>
       <AppBar position="sticky" color="default" elevation={0}>
+        <Header> </Header>
         <Toolbar>
           <Grid container alignContent="center" alignItems="center" justify="space-between">
             <Typography variant="h6">{t("Project Artemis")}</Typography>
